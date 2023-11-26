@@ -1,5 +1,56 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
-<h1>CAMPAÑAS</h1>
+<div class="container">
+    <div class="row">
+        <div class="col">
+        <h1 id="tituloindex">NUESTRAS<br>
+            <b>CAMPAÑAS <br>
+            </b></h1>
+        <br>
+
+        <p>Ofrecemos un abanico de servicios en nuestra <br>
+        empresa de publicidad, que se agrupan en cuatro <br> 
+        áreas claves, cada una de estas áreas abarca<br>
+        estrategias especializadas para promocionar<br> 
+        productos y servicios a nustros clientes.
+        </p>
+        <br>
+        <button type="submit" id="botontres" href="tiposdeserv.html"><b>VER MÁS</b></button>
+    
+        </div>
+    <div class="col">
+        <div class="contenedor">
+            <div class="fila">
+                <img src="img/1.png" alt="Imagen 1" class="imgserv">
+                <img src="img/2.png" alt="Imagen 2" class="imgserv">
+            </div>
+            <div class="fila">
+                <img src="img/3.png" alt="Imagen 3" class="imgserv">
+                <img src="img/4.png" alt="Imagen 4" class="imgserv">
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<br>
+<br>
+<footer>
+    <div class="footer-buttons">
+        <button class="footer-button">
+            <a href="https://www.facebook.com/profile.php?id=61553058951757&mibextid=ZbWKwL"><img src="img/face4.png" alt="Botón 1"></a>
+            
+        </button>
+        <button class="footer-button">
+            <a href="https://instagram.com/marketingkreativo_?igshid=NzZlODBkYWE4Ng=="><img src="img/ig2.png" alt="Botón 2"></a>
+        </button>
+        <button class="footer-button">
+            <a href="https://ar.linkedin.com/"><img src="img/linke2.png" alt="Botón 3"></a>
+        </button>
+    </div>
+</footer>
 {% endblock %}

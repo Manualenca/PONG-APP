@@ -1,10 +1,7 @@
 from django.shortcuts import render
 
-def Funcion(request):
-    datos = {
-        'nombre' : 'Estamos haciendo el proyecto'
-    }
-
+def inicio(request):
+    datos = {}
     return render (request, 'index.html', datos)
 
 def contacto(request):
