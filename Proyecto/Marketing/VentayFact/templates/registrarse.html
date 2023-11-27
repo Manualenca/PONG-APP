@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load crispy_forms_tags %}
+    <body id="fondo">
+        <div class="formulario-container">
+            <a href="index.html" id="logo">
+                <img src="img/logoalt.png">
+            </a>
+            
+         
+        <br>
+        <h1 id="titulo"><b>Registrate gratis</b></h1>
+        <br>
+        <div class="formulario-container">
+            <form action="." class="login-form" method="POST">
+                {% csrf_token %}
+                    {{ form | crispy }}
+            </form>
+        </div>
+        
+    </body>
+{% endblock %}

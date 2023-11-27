@@ -5,22 +5,22 @@
 {% block content %}
 <div class="container">
     <div class="row">
-      <div class="col">
-        <h1 id="tituloindex"><b>Tu visión, nuestra<r></r>
-            creatividad; juntos, creamos <r></r>
-            historias que perduran en la <r></r>
-            mente tu audiencia</b></h1>
+        <div class="col">
+            <h1 id= "titulo1"><b>Tu visión, nuestra<r></r>
+                creatividad; juntos, creamos <r></r>
+                historias que perduran en la <r></r>
+                mente tu audiencia</b></h1>
 
-        <br>
+            <br>
 
-        <p>A través de  creativas estrategias en redes sociales, radios, televisión y afiches, logramos que tu marca destaque, llegando de manera efectiva a tu audiencia y generando impacto duradero. Nuestro éxito se mide en sonrisas satisfechas y el crecimiento que las marcas que confían en nosostros.</p>
-        
+            <p>A través de  creativas estrategias en redes sociales, radios, televisión y afiches, logramos que tu marca destaque, llegando de manera efectiva a tu audiencia y generando impacto duradero. Nuestro éxito se mide en sonrisas satisfechas y el crecimiento que las marcas que confían en nosostros.</p>
+        </div>    
     
-      </div>
-      
-        <img id="inicio" class="img-fluid" src="{% static 'img\design.png' %}" alt="diseño" height="450px">
-      
-    </div>
+        <div class="col">  
+            <img  src="{% static 'img\design.png' %}" id="inicio" alt="diseño" height="450px">
+        </div>
+        <button type="submit" id="botontres"><a  href="{% url 'contacto' %}"><b>CONTACTANOS</b></a></button>
+
 </div>
 
 </body>
