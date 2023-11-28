@@ -1,5 +1,6 @@
 from django.shortcuts import render
-# from  .form import FormClientes
+from .form import FormClientes
+
 
 def inicio(request):
     datos = {}
@@ -31,9 +32,8 @@ def login(request):
     return render (request,'login.html', datos)
 
 def registrarse(request):
-    # datos = {'form': FormClientes()}
-    datos = {}
-    return render (request,'registrarse.html', datos)
+    datos = {'form': FormClientes(request.POST)}
+    return render (request, 'registrarse.html', datos)
 
 def carrito(request):
     datos = {}
