@@ -17,9 +17,11 @@
         </div>    
     
         <div class="col">  
-            <img  src="{% static 'img\design.png' %}" id="inicio" alt="diseño" height="450px">
+            <img  src="{% static 'img\desing.png' %}" id="inicio" alt="diseño" height="450px">
         </div>
-        <button type="submit" id="botontres"><a  href="{% url 'contacto' %}"><b>CONTACTANOS</b></a></button>
+        <button>
+        <a href="{% url 'contacto' %}" class="btn btn-primary" role="button" data-bs-toggle="button">CONTACTANOS</a>
+        </button>
 
 </div>
 
