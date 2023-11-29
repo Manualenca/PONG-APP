@@ -7,14 +7,15 @@
 <h1 id="titulo"><b>REALIZAR COMPRA</b></h1><br>
 <br>
 <div class="table-container">
-    <table>
-        <tr id="letra">
-            <td>Producto</td>
-            <td>Precio</td>
-            <td>Cantidad</td>
-            <td>Subtotal</td>
-        </tr>
-    </table>
+
+    {% for item in items %}
+<tr>
+    <td>{{ item.producto }}</td>
+    <td>{{ item.precio }}</td>
+    <td>{{ item.cantidad }}</td>
+    <td>{{ item.subtotal }}</td>
+</tr>
+{% endfor %}
 </div>
 <hr class="custom-line">
 <footer>

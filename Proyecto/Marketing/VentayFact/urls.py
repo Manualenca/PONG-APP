@@ -12,5 +12,6 @@ urlpatterns = [
     path('tipocamp/', views.tipocamp, name='tipocamp'),
     path('proyecto/login', views.login, name='login'),
     path('registrarse', views.registrarse, name='registrarse'),
-    path('carrito/', views.carrito, name= 'carrito')
+    path('carrito/', views.carrito, name= 'carrito'),
+    path('carrito/')
 ]

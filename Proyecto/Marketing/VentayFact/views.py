@@ -1,5 +1,12 @@
+from itertools import product
 from django.shortcuts import render
+
+from VentayFact.models import Productos
 from .form import FormClientes
+#EXEQUIEL
+from .carro import carro
+from django.shortcuts import redirect
+
 
 
 def inicio(request):
@@ -37,4 +44,45 @@ def registrarse(request):
 
 def carrito(request):
     datos = {}
+    carrito = carro(request)
+    # carro = carrito.get_carrito()
+    print('carro', carrito.get_carrito())
     return render (request, 'carrito.html', datos)
+
+# EXEQUIEL
+
+def agregar_producto(request, producto_id):
+
+    carro=carro(request)
+
+    producto=Productos.objects.get(id=producto_id)
+
+    carro.agregar(producto=producto)
+    return redirect("tienda")
+
+def eliminar_producto(request, producto_id):
+
+    carro=carro(request)
+
+    producto=producto.objects.get(id=producto_id)
+
+    carro.eliminar(producto=Productos)
+    return redirect("tienda")
+
+def restar_producto(request, producto_id):
+
+    carro=carro(request)
+
+    producto=Productos.objects.get(id=producto_id)
+
+    carro.restar(producto=Productos)
+    return redirect("tienda")
+
+# def carrito(request):
+#     print(request)
+    # carro = carro(request)
+    # print(carro)
+    # items = carro.get_items()
+    # datos = {'items': items}
+    # return render(request, 'carrito.html', datos)
+
